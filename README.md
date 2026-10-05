@@ -1,300 +1,134 @@
-URGENT: We have approximately 1 hour left before submission.
+# DarkGuard APEX — live talk-over script (about 3:30)
 
-Your ONLY priority is to produce a finished, usable demonstration video in the next 15–20 minutes.
+Short lines. Read the **SAY** part out loud while you do the **DO** part.
 
-DO NOT redesign the project.
-DO NOT refactor code.
-DO NOT add major features.
-DO NOT debug non-critical issues.
-DO NOT spend time improving architecture.
-DO NOT spend time creating new animations.
-DO NOT restart the project unnecessarily.
+## Before you press record (2 minutes)
 
-If something already works, USE IT.
+1. Open the 5 PowerShell windows. Check **5 STATUS** says all UP and Tor 100%.
+2. Open http://127.0.0.1:5500 and log in.
+3. Go to **Attribution** → **Stored persona corpus** → press **Random** → run it.
+   Repeat until the result says **PROBABLE**. Keep that pair selected.
+4. Close every other tab and app. Start OBS recording.
 
-OBJECTIVE
+---
 
-Run the existing website and create a professional 3–4 minute demonstration video for:
+## 1. Terminals — 15 sec
 
-PS ID: 26151
-PS: Dark Web Threat Actor De-anonymization
-Organization: NTRO
+**DO:** Show the 5 PowerShell windows. Stop on **5 STATUS**.
 
-The video must demonstrate the strongest working features already present in the application.
+**SAY:**
+> This is DarkGuard APEX, running fully on our own machine.
+> Four services: Tor, the scraper, the attribution engine, and the dashboard.
+> Tor is connected — one hundred percent.
 
-The demo should feel like a real cyber threat-intelligence investigation.
+## 2. Problem — 15 sec
 
-DEMO STORY
+**DO:** Switch to the browser. Click **APEX Console** in the left menu.
 
-Use one fictional threat actor:
+**SAY:**
+> Our problem statement is SIH 26151 from NTRO — finding who is behind a dark web identity.
+> Criminals change their names, keys and wallets.
+> But their habits and their servers stay the same. That is what we track.
 
-ShadowViper
+## 3. Pipeline — 25 sec
 
-Follow this simple story:
+**DO:** On the APEX Console, click the stage boxes one by one:
+**Collect → Safety filter → Store → Confidence engine.** Pause one second on each.
 
-Search actor → Actor profile → Connected identifiers → Relationship graph → Infrastructure intelligence → AI/persona analysis → Timeline → Attribution → Export
+**SAY:**
+> Every request goes through six steps.
+> First we collect, through our own Tor connection.
+> Then a safety filter — it blocks illegal content *before* we even open the page.
+> Everything we collect is hashed at capture, so nobody can tamper with it later.
+> Then the confidence engine weighs all the evidence and tells us how sure it is.
 
-Do NOT demonstrate every feature in the application.
+## 4. Live network — 15 sec
 
-Only demonstrate features that actually work.
+**DO:** Click **Network Status** in the left menu. Point at the Tor exit IP, then the two charts.
 
-EXACT EXECUTION
+**SAY:**
+> This is live. This is our real Tor exit IP.
+> We have about seventy-five dark web marketplaces, collected from public directories —
+> dark.fail, tor.taxi and onion.live.
 
-1. START
+## 5. Scan — 15 sec *(skip if it loads slowly)*
 
-Launch the website.
+**DO:** Click **New Scan** → type a test keyword → start. Show the canvas for a few seconds.
 
-Wait until it is fully loaded.
+**SAY:**
+> A scan visits each marketplace and searches it.
+> You can see each one — online, dead, or blocked — as it happens.
 
-Start screen recording.
+## 6. Attribution — 25 sec
 
-Begin with the main dashboard.
+**DO:** Click **Attribution**. Your PROBABLE pair is already selected. Press **Run**.
+Let the evidence bar animate.
 
-Narration:
+**SAY:**
+> Now the main part — attribution. Are these two dark web sellers the same person?
+> This is our test data, where we know the right answer.
+> Each signal pushes this marker. Right means same person. Left means different people.
+> If a signal finds nothing, it counts as zero. We don't hide it.
 
-"Dark web threat actors frequently change identities, infrastructure and communication channels to avoid attribution. This platform brings these scattered indicators together into a unified threat intelligence investigation."
+## 7. Result — 20 sec
 
-2. DASHBOARD — 20 SECONDS
+**DO:** Scroll to the **Verdict** panel. Point at the tier (PROBABLE) and the band.
+Then point at the coloured signal chips.
 
-Show the main dashboard.
+**SAY:**
+> The answer is not a guess. It's "probable" — likely linked — with the exact reasons.
+> Behaviour alone can never give us the top level.
+> For that we need a hard proof, like a shared key or a shared server.
 
-Quickly demonstrate the important statistics and intelligence overview.
+## 8. Identifiers + email trace — 20 sec
 
-Do not spend time reading every number.
+**DO:** Click the **Identifiers** tab. Then click the **Email trace** tab.
 
-Narration:
+**SAY:**
+> Here are their keys, wallets and contact emails, side by side.
+> Even when the email changes, we check the pattern — same name, same provider, number going up.
+> The email trace finds every account with that same pattern,
+> and shows how many are really the same person.
 
-"The platform provides investigators with a consolidated view of threat actors, indicators, infrastructure and recent intelligence."
+## 9. Dossier — 15 sec
 
-3. SEARCH — 25 SECONDS
+**DO:** Click the **Actor dossier** tab. Move the mouse down the rows.
 
-Use the search feature.
+**SAY:**
+> This is everything the problem statement asked us to store:
+> confidence, category, last scan date, source, and linked suspects.
 
-Search:
+## 10. Export — 15 sec
 
-ShadowViper
+**DO:** Click **CSV**, then **JSON**, then **Report**. Open the PDF for two seconds.
 
-Open the relevant result.
+**SAY:**
+> We can export it as CSV, JSON, or a full report —
+> built to intelligence and forensic standards, with every limit written inside.
 
-Show the actor profile.
+## 11. Limits — 15 sec
 
-Point out:
+**DO:** Click **APEX Console**. Scroll down to **What this system cannot do**.
 
-- Handle
-- Risk/category
-- Attribution confidence
-- First/last seen
-- Sources
+**SAY:**
+> We are honest about our limits.
+> A well-hidden server can't be traced — research says only about five percent can.
+> We can't follow Monero.
+> Our system gives a lead for an officer to check. Never a final verdict.
 
-Narration:
+## 12. End — 10 sec
 
-"An investigation can begin with a single dark-web alias. Searching the platform immediately brings together the intelligence associated with that persona."
+**DO:** Scroll back to the top of APEX Console. Stop recording.
 
-4. IDENTIFIERS — 30 SECONDS
+**SAY:**
+> DarkGuard APEX — collect, connect, and prove, in one self-hosted system.
+> Thank you.
 
-Show the actor's available identifiers.
+---
 
-Prioritize whatever is already implemented:
+## If something goes wrong
 
-- Handles
-- PGP keys
-- Wallets
-- Onion addresses
-- Marketplace accounts
-- Forum accounts
-
-Click one or two important identifiers.
-
-Narration:
-
-"The platform correlates identifiers such as handles, PGP keys, wallets and dark-web accounts, allowing investigators to move beyond isolated observations."
-
-5. RELATIONSHIP GRAPH — 40 SECONDS
-
-THIS IS A KEY PART OF THE DEMO.
-
-Open the relationship graph.
-
-Show the actor and connected entities.
-
-Expand the graph if possible.
-
-Click important nodes.
-
-Show relationships between:
-
-Actor → Handle → PGP → Wallet → Marketplace → Onion Service → Infrastructure
-
-Narration:
-
-"The relationship graph turns individual indicators into an investigative map. Here, multiple identities and technical indicators can be viewed as relationships belonging to the same suspected actor."
-
-Do not spend time configuring the graph.
-
-Use the default useful visualization if available.
-
-6. INFRASTRUCTURE — 30 SECONDS
-
-Open the infrastructure section.
-
-Show whatever is already implemented.
-
-Prioritize:
-
-- Onion service indicators
-- Server/service information
-- SSL/certificate relationships
-- Clearnet correlations
-- Infrastructure reuse
-- Hosting/IP information
-
-Narration:
-
-"Technical infrastructure can provide another path toward attribution. Service fingerprints, certificates, infrastructure reuse and other observable indicators can help investigators identify connections between hidden services and external infrastructure."
-
-Only show features that actually exist.
-
-7. AI PERSONA ANALYSIS — 35 SECONDS
-
-If AI/stylometric/behavioural analysis already works, demonstrate it.
-
-Use:
-
-ShadowViper
-
-Compare it against the related fictional persona available in the system.
-
-Show the resulting similarity/confidence.
-
-Narration:
-
-"When threat actors migrate or rebrand, their behaviour and writing patterns can remain consistent. AI-assisted analysis helps identify potentially related personas and provides an additional attribution signal."
-
-If this feature does NOT work reliably:
-
-SKIP IT.
-
-Do NOT waste time fixing it.
-
-8. TIMELINE — 20 SECONDS
-
-Open the timeline.
-
-Show the progression of the actor:
-
-First appearance → marketplace activity → infrastructure discovery → persona change → latest observation
-
-Narration:
-
-"The timeline places these observations into chronological context, allowing investigators to understand how the actor and their infrastructure evolved."
-
-9. ATTRIBUTION SUMMARY — 20 SECONDS
-
-Show the strongest investigation summary page.
-
-Highlight:
-
-- Attribution confidence
-- Evidence
-- Related identities
-- Infrastructure
-- Sources
-- Last observation
-
-Narration:
-
-"The final investigation view consolidates the available evidence into an attribution assessment, giving analysts the supporting indicators, confidence level and source context."
-
-Use "likely linked" or "high-confidence correlation" rather than claiming absolute identity.
-
-10. EXPORT — 15 SECONDS
-
-Click the export functionality.
-
-If available, demonstrate:
-
-CSV → JSON → Report
-
-Do NOT wait for long downloads.
-
-Show the export/report screen briefly.
-
-Narration:
-
-"Investigation results can then be exported for further analysis, sharing and reporting."
-
-11. END — 10 SECONDS
-
-Return to the best-looking dashboard/investigation screen.
-
-Final narration:
-
-"By combining intelligence collection, correlation, infrastructure analysis, relationship mapping, AI-assisted persona analysis and reporting, the platform provides an end-to-end workflow for dark-web threat actor intelligence and attribution."
-
-End recording.
-
-CRITICAL TIME RULE
-
-You have approximately 15–20 minutes.
-
-Follow this priority:
-
-1. RECORD WORKING FEATURES
-2. COMPLETE VIDEO
-3. ADD NARRATION
-4. VERIFY VIDEO
-5. ONLY THEN make tiny visual fixes if time remains
-
-If any feature takes more than approximately 20 seconds to load or fails twice:
-
-SKIP IT AND CONTINUE.
-
-Do NOT get stuck.
-
-VIDEO
-
-Target:
-
-3–4 minutes
-
-Resolution:
-
-1920×1080 if immediately available
-
-Use screen recording with voice narration.
-
-No complicated editing.
-
-No unnecessary intro animation.
-
-No music unless it can be added instantly.
-
-Keep narration synchronized with the screen.
-
-IMPORTANT
-
-This is a demonstration, NOT a development walkthrough.
-
-Never show:
-
-- Source code
-- Terminal
-- Developer tools
-- Debug logs
-- Errors
-- Database internals
-- Installation
-- Package installation
-- Long loading screens
-
-Use fictional demonstration intelligence.
-
-Do not falsely attribute criminal activity to a real person or organization.
-
-If something is not implemented, SKIP it.
-
-DO NOT BUILD IT NOW.
-
-The final result must be a completed video file, not instructions about how to make one.
-
-START NOW.
+- A page is slow → say "this takes a moment" and click the next item.
+- The result is not PROBABLE → say "likely linked" only if it shows PROBABLE. If it shows INSUFFICIENT, say:
+  "Here it says the evidence is not enough — so it refuses to guess."
+- Never say: "real-time", "it finds the real person", "AI-powered".
